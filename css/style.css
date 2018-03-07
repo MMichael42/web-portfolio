@@ -1,0 +1,685 @@
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+h1 {
+  font-weight: 200;
+}
+
+a {
+  color: #F44336;
+  transition: color .1s;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  color: #B71C1C;
+}
+.highlight {
+  color: #F44336;
+}
+.container {
+  border: 0px solid black;
+  display: grid;
+  width: 100%;
+  /* min-height: 100%; */
+  opacity: 1.0;
+  transition: opacity 1s;
+}
+#mainContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "heya"
+    "works"
+    "skills"
+    "contact"
+    "dog"
+    "footer"
+    ;
+}
+
+.sectionWrap {
+  border: 0px solid black;
+  width: 100%;
+  margin-top:00px;
+}
+.section {
+  display: grid;
+  margin: auto;
+  width: 96%;
+  border: 0px solid red;
+}
+.sectionHeading {
+  border: 0px solid grey;
+  font-size: 40px;
+  margin: 20px;
+  margin-bottom: 10px;
+}
+.sectionDescription {
+  border: 0px solid grey;
+  margin: 20px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+
+
+.md-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: auto;
+  max-height: 100%;
+  z-index: 2000;
+  visibility: hidden;
+  backface-visibility: hidden;
+  transform: translate(-50%, -50%) scale(.90);
+  transition: all .35s ease-out;
+  opacity: 0;
+  background-color: white;
+  border: 0px solid grey;
+  /* box-shadow: 0px 0px 6px #D400FF; */
+}
+.md-show {
+  visibility: visible;
+  opacity: 1.0;
+  transform: translate(-50%, -50%) scale(1);
+}
+.md-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  background: black;
+  transition: all .35s;
+}
+.md-overlay-active {
+  visibility: visible;
+  opacity: 0.80;
+}
+.md-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "md-header md-header"
+    "md-sideImg md-sideImg"
+    "md-about md-about"
+    "md-info md-info"
+    "md-button md-button"
+    ;
+  border: 0px solid red;
+  width: 100%;
+  height: 100%;
+  align-content: start;
+  margin: 0 auto;
+  /* background-color: black;
+  color: white; */
+}
+.md-header {
+  grid-area: md-header;
+  width: 100%;
+  min-height: 26px;
+  height: auto;
+  border: 0px solid green;
+  border-bottom: 1px solid #ddd;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 10px;
+  align-self: start;
+  margin: 0 auto;
+  margin-bottom: 00px;
+  padding-bottom: 15px;
+  background-color: white;
+  color: #242322;
+}
+.md-sideImg {
+  grid-area: md-sideImg;
+  border: 0px solid orangered;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 10px;
+  overflow: hidden;
+}
+#md-sideImg-trial1 {
+  width: 50%;
+}
+.md-image {
+  width: 100%;
+  height: auto;
+  border: 0px solid red;
+}
+.md-about {
+  grid-area: md-about;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 24px;
+}
+.md-info {
+  grid-area: md-info;
+  border: 0px solid orange;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.md-button-area {
+  grid-area: md-button;
+  width: 100%;
+  height: 40px;
+  border: 0px solid green;
+  align-self: end;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* background-color: rgba(221, 221, 221, 0.356); */
+  background-color: white;
+}
+.md-button {
+  display: block;
+  width: 100px;
+  height: 35px;
+  border: 1px solid #242322;
+  border-radius: 2px;
+  color: #44484B;
+  background-color: white;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 4px;
+  transition: all .51s;
+  cursor: pointer;
+}
+.md-button:hover {
+  background-color: #F44336;
+  color: white;
+}
+
+
+#headerWrap {
+  grid-area: header;
+  background-color: white;
+}
+#header {
+  border: 0px solid grey;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+
+
+#heyaWrap {
+  grid-area: heya;
+  background-color: white;
+  color: #242322;
+}
+#heya {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: 
+    "heyaHeading"
+    "heyaDescription"
+    "totallyNotBalding"
+    ;
+  border: 0px solid black;
+}
+#heyaHeading {
+  grid-area: heyaHeading;
+  margin: 40px;
+  margin-bottom: 10px;
+  font-size: 60px;
+}
+#heyaDescription {
+  grid-area: heyaDescription;
+  margin: 40px;
+  margin-top: 20px;
+  margin-bottom: 00px;
+  font-size: 20px;
+}
+#totallyNotBalding {
+  grid-area: totallyNotBalding;
+  margin: 40px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+
+#workWrap {
+  grid-area: works;
+  background-color: #242322;
+  color: white;
+  width: 100%;
+  border: 0px solid green;
+}
+#work {
+  border: 0px solid white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "workHeading"
+    "workDescription"
+    ;
+}
+#workHeading {
+  border: 0px solid yellow;
+  grid-area: workHeading;
+}
+#workDescription {
+  border: 0px solid red;
+  grid-area: workDescription;
+}
+#worksFrame {
+  column-count: 3;
+  border: 0px solid gray;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 0px;
+  width: 100%;
+}
+.workItem {
+  display: inline-block;
+  break-inside: avoid-column;
+  /* border: 2px solid rgb(125, 0, 149); */
+  border: 2px solid #44484B;
+  margin: 0px;
+  margin-bottom: 10px;
+  opacity: 1.0;
+  transition: all .50s;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.workItem:hover {
+  border: 2px solid #B71C1C;
+}
+.workItem:hover img {
+  transform: scale(1.08);
+  opacity: 1;
+}
+.workItemImg {
+  border: 0px solid green;
+  width: 100%;
+  transition: all .5s;
+}
+.workItemOverlay {
+  display: grid;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "overlayHeader overlayHeader"
+    ;
+  border: 0px dashed white;
+  opacity: 0;
+  transition: all .5s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.workItem:hover > .workItemOverlay {
+  opacity: 1;
+}
+.workItem:hover > .workItemImg {
+  opacity: 0.10;
+}
+.overlayHeader {
+  grid-area: overlayHeader;
+  border: 00px solid red;
+  width: 100%;
+  margin: auto;
+  height: auto;
+  text-align: center;
+  font-size: 20px;
+  font-size:calc(100% + .5vw);
+  overflow-wrap: normal;
+}
+
+
+#skillsWrap {
+  grid-area: skills;
+  background-color:white;
+}
+#skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "skillsHeading"
+    "skillsDescription"
+    ;
+  border: 0px solid brown;
+}
+#skillsHeading {
+  grid-area: skillsHeading;
+}
+#skillsDescription {
+  grid-area: skillsDescription;
+  margin: 20px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+
+
+#contactWrap {
+  grid-area: contact;
+  background-color: #242322;
+  color: white;
+}
+#contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "contactHeading"
+    "contactDescription"
+    ;
+  border: 0px solid blue;
+}
+#contactHeading {
+  grid-area: contactHeading;
+}
+#contactDescription {
+  grid-area: contactDescription;
+}
+
+
+#dogWrap {
+  grid-area: dog;
+  background-color: white;
+  color: black;
+}
+#dog {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "dogHeading"
+    "dogDescription"
+    ;
+  border: 0px solid orangered;
+}
+#dogHeading {
+  grid-area: dogHeading;
+}
+#dogDescription {
+  grid-area: dogDescription;
+  margin: 20px;
+  margin-top: 0px;
+}
+#ollieFrame {
+  width: 100%;
+  border: 0px solid red;
+  overflow: hidden;
+  border-radius: 01%;
+}
+#ollieImg {
+  width: 100%;
+  transition: all .5s;
+}
+#ollieFrame:hover > #ollieImg {
+  transform: scale(1.05);
+}
+
+
+#footerWrap {
+  grid-area: footer;
+  background-color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+#footer {
+  border: 0px solid orange;
+}
+
+@media (max-width: 415px) {
+  .md-modal {
+    width: 95%;
+    margin-bottom: 44px;
+  }
+  .md-header {
+    font-size: 20px;
+  }
+  .md-sideImg {
+    width: 60%;
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) and (max-height: 420px) {
+  .md-modal {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+  .md-sideImg {
+    display: none;
+  }
+  .md-about {
+    display: none;
+  }
+  .md-info {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .md-modal {
+    width: 60%;
+    height: auto;
+  }
+
+  #mainContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "heya heya"
+      "works works"
+      "skills contact"
+      "dog dog"
+      "footer footer"
+    ;
+  }
+  
+  #heya {
+    border: 0px solid red;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 70%;
+  }
+  
+  #worksFrame {
+    column-count: 4;
+  }
+
+  #dog {
+    width: 70%;
+  }
+
+}
+
+@media (min-width: 1023px) {
+  
+  .md-modal {
+    width: 50%;
+  }
+  .highlight {
+    color: white;
+  }
+  
+  #mainContainer {
+    grid-template-areas:
+      "header header"
+      "heya works"
+      "skills works"
+      "contact works"
+      "dog works"
+      "footer footer"
+    ;
+  }
+
+  .sectionWrap {
+    width: 80%;
+    margin: auto;
+  }
+  .sectionHeading {
+    font-size: 50px;
+  }
+
+  .overlayHeader {
+    font-size: calc(100% + 0.20vw);
+  }
+
+  #headerWrap {
+    display: none;
+  }
+
+  #heyaWrap {
+    border: 0px solid black;
+    width: 80%;
+    margin: auto;
+    margin-top: 0px;
+    background-color: #D50000;
+    color: white;
+  }
+  #heya {
+    border: 0px solid green;
+    margin: 0px;
+    width: 100%;
+  }
+  #heyaHeading {
+    border: 0px solid red;
+    margin: 20px;
+    font-size: 60px;
+    border-radius: 50%;
+  }
+  #heyaDescription {
+    border: 0px solid orange;
+    margin: 20px;
+    margin-top: 0px;
+  }
+  #totallyNotBalding {
+    margin: 20px;
+    margin-top: 0px;
+  }
+
+  #workWrap {
+    border: 0px solid red;
+    margin-top: 0px;
+    height: 100%;
+  }
+  #work {
+    margin-top: 50px;
+  }
+
+  #skillsWrap {
+    border: 0px solid red;
+  }
+  #skills {
+    border: 0px solid green;
+    width: 100%;
+    margin: 0px;
+  }
+
+  #contactWrap {
+    border: 0px solid red;
+  }
+  #contact {
+    border: 0px solid green;
+    width: 100%;
+  }
+  #contactWrap {
+    background-color: white;
+    color: black;
+  }
+
+  #dogWrap {
+    border: 0px solid red;
+  }
+  #dog {
+    border: 0px solid green;
+    width: 100%;
+  }
+
+  #ollieFrame {
+    width: 80%;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 1150px) {
+  #mainContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "heya works works"
+      "skills works works"
+      "contact works works"
+      "dog works works"
+      ". works works"
+      "footer footer footer"
+    ;
+  }
+  #worksFrame {
+    column-count: 5;
+  }
+  #heyaWrap {
+    width: 90%;
+  }
+  #heya {
+    border: 0px solid black;
+  }
+}
+
+@media (min-width: 1439px) {
+  #mainContainer {
+    margin: auto;
+  }
+  .sectionHeading {
+    font-size: 50px;
+  }
+  .sectionDescription {
+    font-size: 22px;
+  }
+  #heyaHeading {
+    font-size: 90px;
+  }
+  #heyaDescription {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1599px) {
+
+  .md-modal {
+    width: 40%;
+  }
+
+  #mainContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "heya works works"
+      "skills works works"
+      "contact works works"
+      "dog works works"
+      "footer footer footer"
+    ;
+    max-width: 1800px;
+  }
+  #worksFrame {
+    column-count: 5;
+  }
+}

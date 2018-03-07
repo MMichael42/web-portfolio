@@ -1,0 +1,615 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+    <title>Hello</title>
+  </head>
+
+  <body>
+
+
+    <div class="md-modal" id="soonish-modal">
+      <div class="md-content">
+        <div class="md-header">Soonishbook.com</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-soonish" src="images/soonish3.png" />
+        </div>
+        <div class="md-about" id="md-about-soonish">
+          About
+        </div>
+        <div class="md-info" id="md-info-soonish">
+          <i>Soonish: Ten Emerging Technologies That'll Improve and/or Ruin Everything</i> by
+          Kelly and Zach Weinersmith is now a New York Times Best Seller. It's a funny, insightful book.
+          <br /><br />
+          I designed and built the website for Soonish. It is a highly 
+          responsive website built with HTML, CSS, and just a tiny pinch of JS.
+          <br /><br />
+          Visit <a href="http://www.soonishbook.com" target="_blank">soonishbook.com</a> 
+        </div>
+        <div class="md-button-area">
+            <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of Soonish modal -->
+
+    <div class="md-modal" id="twinkle-modal">
+      <div class="md-content">
+        <div class="md-header">Astronomically Correct Twinkle Twinkle</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-twinkle" src="images/twinkle.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          info section
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of twinkle twinkle modal -->
+
+    <div class="md-modal" id="twins-modal">
+      <div class="md-content">
+        <div class="md-header">Twins in Time</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-twins" src="images/twins.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of BLANK modal -->
+
+    <div class="md-modal" id="trial1-modal">
+      <div class="md-content">
+        <div class="md-header">Trial of the Clone</div>
+        <div class="md-sideImg" id="md-sideImg-trial1">
+          <img class="md-image" id="md-image-trial1" src="images/totc1.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          Trial of the clone story description
+          <br /><br />
+          Tech description
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of trial of the clone modal -->
+
+    <div class="md-modal" id="smbc1-modal">
+      <div class="md-content">
+        <div class="md-header">Save Yourself, Mammal!</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-smbc1" src="images/smbc1.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of smbc1 modal -->
+
+    <div class="md-modal" id="smbc2-modal">
+      <div class="md-content">
+        <div class="md-header">The Most Dangerous Game</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-BLANK" src="images/smbc2.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of smbc2 modal -->
+
+    <div class="md-modal" id="smbcScience-modal">
+      <div class="md-content">
+        <div class="md-header">Science: Ruining Everything Since 1543</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-smbcScience" src="images/science.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of smbc science modal -->
+
+    <div class="md-modal" id="smbcReligion-modal">
+      <div class="md-content">
+        <div class="md-header">Religion: Ruining Everything Since 4004 B.C.</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-smbcReligion" src="images/religion.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of smbc religion modal -->
+
+    <div class="md-modal" id="augie-modal">
+      <div class="md-content">
+        <div class="md-header">Augie and the Green Knight</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-augie" src="images/augie.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of augie modal -->
+
+    <div class="md-modal" id="nerdDisses-modal">
+      <div class="md-content">
+        <div class="md-header">Nerd Disses</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-nerdDisses" src="images/nerddisses.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of nerd disses modal -->
+
+    <div class="md-modal" id="acadia-modal">
+      <div class="md-content">
+        <div class="md-header">Acadia</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-acadia" src="images/acadia.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of acadia modal -->
+
+    <div class="md-modal" id="poly-modal">
+      <div class="md-content">
+        <div class="md-header">Polystate</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-poly" src="images/polystate.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of polystate modal -->
+
+    <div class="md-modal" id="tbontb-modal">
+      <div class="md-content">
+        <div class="md-header">To Be or Not To Be</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-tbontb" src="images/tbontb.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of tbontb modal -->
+
+    <div class="md-modal" id="bahfest-modal">
+      <div class="md-content">
+        <div class="md-header">BAHFest Video Site</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-BLANK" src="images/computer1.png" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of bahfest modal -->
+
+    <div class="md-modal" id="monocle-modal">
+      <div class="md-content">
+        <div class="md-header">singleusemonocles.com</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-monocle" src="images/computer1.png" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of monocle modal -->
+
+    <div class="md-modal" id="negativeSpace-modal">
+      <div class="md-content">
+        <div class="md-header">Negative Space</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-ns" src="images/computer1.png" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of negative space modal -->
+
+    <div class="md-modal" id="humphrey-modal">
+      <div class="md-content">
+        <div class="md-header">Humphrey the Monster</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-BLANK" src="images/humphrey.jpg" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          BLANK
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of BLANK modal -->
+
+    <div class="md-modal" id="castle-modal">
+      <div class="md-content">
+        <div class="md-header">Castle Carolina</div>
+        <div class="md-sideImg">
+          <img class="md-image" id="md-image-castle" src="images/castle1.png" />
+        </div>
+        <div class="md-about">
+          About
+        </div>
+        <div class="md-info">
+          Castle Carolina is an ongoing, long form illustrated story authored by myself.
+          <br /><br /> 
+          I built the site to be a lightweight, and simple reading experience for users. Designed using HTML, CSS, and a smidgen of PHP to interact with the database
+          that holds information regarding each page.
+          <br /><br />
+          Visit <a href="http://www.castlecarolina.com" target="_blank">castlecarolina.com</a>
+        </div>
+        <div class="md-button-area">
+          <button class="md-button" onclick="closeModal()">close</button>
+        </div>
+      </div> <!-- end of content -->
+    </div> <!-- end of modal castle carolina modal -->
+
+
+
+
+
+
+
+
+
+
+    <div class="container" id="mainContainer">
+
+      <div class="sectionWrap" id="headerWrap">
+        <div id="header">
+          <a href="#workWrap">work</a> - 
+          <a href="#skillsWrap">skills</a> - 
+          <a href="#dogWrap">dog</a>
+        </div> <!-- end of header div -->
+      </div>
+      
+      <div class="sectionWrap" id="heyaWrap">
+        <div class="section" id="heya">
+          <div class="sectionHeading" id="heyaHeading">
+            Heya, my name is <span class="highlight">Michael.</span>
+          </div>
+          <div class="sectionDescription" id="heyaDescription">
+            I'm a <span class="highlight">web developer</span> and <span class="highlight">designer</span>, 
+            and according to my fiancée,
+            I'm going <span class="highlight">bald.</span> <!-- animate bald, so when it's hovered over or clicked,
+                the text below is revealed --> 
+          </div>
+          <div id="totallyNotBalding">(I'm too young to be balding.)</div>
+        </div>
+      </div> <!-- end of heya -->
+      
+      <div class="sectionWrap" id="workWrap">
+        <div class="section" id="work">
+          <div class="sectionHeading" id="workHeading">Work.</div>
+          <div class="sectionDescription" id="workDescription">
+            I've been lucky enough to be a part of lots of cool things. Check them out. 
+          </div>
+          <div id="worksFrame">
+            <div class="workItem" id="soonish">
+              <img class="workItemImg website" id="soonishImg" src="images/soonish.jpg" />
+              <div class="workItemOverlay" id="soonishOverlay">
+                <div class="overlayHeader">
+                  Website design
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="twinkle">
+              <img class="workItemImg book" id="twinkleImg" src="images/twinkle.jpg" />
+              <div class="workItemOverlay" id="twinkleOverlay">
+                  <div class="overlayHeader">
+                    Print and Multimedia eBook design
+                  </div>
+                </div>
+            </div>
+            <div class="workItem" id="twins">
+              <img class="workItemImg book" id="twinsImg" src="images/twins.jpg" />
+              <div class="workItemOverlay" id="twinsOverlay">
+                  <div class="overlayHeader">
+                    eBook design
+                  </div>
+                </div>
+            </div>
+            <div class="workItem" id="trial1">
+              <img class="workItemImg book" id="totc1Img" src="images/totc1.jpg" />
+              <div class="workItemOverlay" id="totc1Overlay">
+                  <div class="overlayHeader">
+                    Interactive eBook design
+                  </div>
+                </div>
+            </div>
+            <div class="workItem" id="smbc1">
+              <img class="workItemImg book" id="smbc1Img" src="images/SMBC1.jpg" />
+              <div class="workItemOverlay" id="smbc1Overlay">
+                <div class="overlayHeader">
+                  eBook design
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="smbc2">
+              <img class="workItemImg book" id="smbc2Img" src="images/SMBC2.jpg" />
+              <div class="workItemOverlay" id="smbc2Overlay">
+                <div class="overlayHeader">
+                  eBook design
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="smbcScience">
+              <img class="workItemImg book" id="smbcScienceImg" src="images/science.jpg" />
+              <div class="workItemOverlay" id="smbcScienceOverlay">
+                <div class="overlayHeader">
+                  Print and eBook design
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="smbcReligion">
+              <img class="workItemImg book" id="smbcReligionImg" src="images/religion.jpg" />
+              <div class="workItemOverlay" id="smbcReligionOverlay">
+                <div class="overlayHeader">
+                  Print and eBook design
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="augie">
+              <img class="workItemImg book" id="augieImg" src="images/augie.jpg" />
+              <div class="workItemOverlay" id="augieOverlay">
+                <div class="overlayHeader">
+                  Print and eBook design
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="nerdDisses">
+              <img class="workItemImg book" id="nerdDissesImg" src="images/nerddisses.jpg" />
+              <div class="workItemOverlay" id="nerdDissesOverlay">
+                <div class="overlayHeader">
+                  eBook design
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="acadia">
+              <img class="workItemImg book" id="acadiaImg" src="images/acadia.jpg" />
+              <div class="workItemOverlay" id="acadiaOverlay">
+                <div class="overlayHeader">
+                  eBook design
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="poly">
+              <img class="workItemImg book" id="polystateImg" src="images/polystate.jpg" />
+              <div class="workItemOverlay" id="polystateOverlay">
+                <div class="overlayHeader">
+                  eBook design
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="tbontb">
+              <img class="workItemImg book" id="tbontbImg" src="images/tbontb.jpg" />
+              <div class="workItemOverlay" id="tbontbOverlay">
+                <div class="overlayHeader">
+                  Interactive eBook design
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="bahfest">
+              <img class="workItemImg website" id="bahfestImg" src="images/BAH.jpg" />
+              <div class="workItemOverlay" id="bahfestOverlay">
+                <div class="overlayHeader">
+                  Video website design
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="monocle">
+              <img class="workItemImg website" id="monocleImg" src="images/monocle.jpg" />
+              <div class="workItemOverlay" id="monocleOverlay">
+                  <div class="overlayHeader">
+                    Website design
+                  </div>
+                </div>
+            </div>
+            <div class="workItem" id="castle">
+              <img class="workItemImg website" id="carolinaImg" src="images/carolina.jpg" />
+              <div class="workItemOverlay" id="carolinaOverlay">
+                  <div class="overlayHeader">
+                    Website design, writer, illustrator
+                  </div>
+                </div>
+            </div>
+            <div class="workItem" id="negativeSpace">
+              <img class="workItemImg website" id="negativeSpaceImg" src="images/ns.jpg" />
+              <div class="workItemOverlay" id="negativeSpaceOverlay">
+                <div class="overlayHeader">
+                  Website design, writer, illustrator
+                </div>
+              </div>
+            </div>
+            <div class="workItem" id="humphrey">
+              <img class="workItemImg book" id="humphreyImg" src="images/humphrey.jpg" />
+              <div class="workItemOverlay" id="humphreyOverlay">
+                <div class="overlayHeader">
+                  Author, ebook design
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- end of worksframe -->
+        </div>
+      </div> <!-- end of work -->
+      
+      <div class="sectionWrap" id="skillsWrap">
+        <div class="section" id="skills">
+          <div class="sectionHeading" id="skillsHeading">Skills.</div>
+          <div class="sectionDescription" id="skillsDescription">
+            HTML5, CSS3, JS, React & Redux, Node, AWS, Expertise in Photoshop, 
+            InDesign, Illustrator, Final Cut Pro, and learning more every day.
+          </div>
+        </div>
+      </div> <!-- end of skills -->
+
+      <div class="sectionWrap" id="contactWrap">
+        <div class="section" id="contact">
+          <div class="sectionHeading" id="contactHeading">Contact.</div>
+          <div class="sectionDescription" id="contactDescription">
+              If you'd like to work on something cool together, shoot me an
+              <a href="mailto:johnsonMichaelDev@gmail.com?Subject=Lets%20make%20something%20cool">email.</a>
+          </div>
+        </div>
+      </div> <!-- end of contact -->
+
+      <div class="sectionWrap" id="dogWrap">
+        <div class="section" id="dog">
+          <div class="sectionHeading" id="dogHeading">Dog.</div>
+          <div class="sectionDescription" id="dogDescription">
+            Look at my dog. She is the best dog.
+          </div>
+          <div id="ollieFrame">
+            <img id="ollieImg"src="images/ollie.jpg">
+          </div>
+        </div>
+      </div> <!-- end of dog -->
+
+      <div class="sectionWrap" id="footerWrap">
+        <div class="section" id="footer">
+          &copy; 2018 Michael Johnson <br />
+          <span style="font-size: 10px">
+            (if you do want to use something from this site,<br /> just 
+            <a href="mailto:johnsonMichaelDev@gmail.com?Subject=Lets%20make%20something%20cool">email</a> me, 
+            I'll probably let you)
+            </span>
+        </div>
+      </div> <!-- end of footer -->
+
+    </div> <!-- end of container div -->
+
+    <div class="md-overlay" id="overlay"></div>
+    <script>
+      let modalOpen = false;
+      let modalName = '';
+
+      let closeModal = () => {
+        if (modalOpen) {
+          modalOpen = false;
+          $('.md-overlay').removeClass('md-overlay-active');
+          $(modalName).removeClass('md-show');
+        }
+      }
+
+      $('.workItem').click( (item) => {
+        modalOpen = true;
+        modalName = '#' + item.currentTarget.id + '-modal';
+        $(modalName).addClass('md-show');
+        $('.md-overlay').addClass('md-overlay-active');
+      });
+
+      // to close the modal
+      $('.md-overlay').click( () => {
+        closeModal();
+      });
+    </script>
+    <script src="js/main.js"></script> 
+  </body>
+</html>

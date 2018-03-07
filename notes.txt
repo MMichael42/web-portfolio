@@ -1,0 +1,25 @@
+notes for portfolio site
+
+copy: 
+Heya, my name is Michael. I'm a web developer, illustrator, writer and
+apparently balding according to my finance. 
+(I'm too young to be balding :()
+
+I've been a part of lots of cool things. Check them out.  
+
+If you want me to help you with something cool, or want to chat about
+what I've done, shoot me an email. 
+
+Check out my dog. She is the prettiest dog.
+(hover over her picture, caption: Ollie Fact: she learned to sit 
+in one day)
+
+pdf link to download cv
+
+
+links / resources: 
+type: http://tobiasahlin.com/typesource/
+
+
+user testing: 
+peek.usertesting.com
