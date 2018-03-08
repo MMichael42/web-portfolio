@@ -40,6 +40,7 @@ a:hover {
     "dog"
     "footer"
     ;
+  overflow: hidden;
 }
 
 .sectionWrap {
@@ -67,149 +68,9 @@ a:hover {
 }
 
 
-.md-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  height: auto;
-  max-height: 100%;
-  z-index: 2000;
-  visibility: hidden;
-  backface-visibility: hidden;
-  transform: translate(-50%, -50%) scale(.90);
-  transition: all .35s ease-out;
-  opacity: 0;
-  background-color: white;
-  border: 0px solid grey;
-  /* box-shadow: 0px 0px 6px #D400FF; */
-}
-.md-show {
-  visibility: visible;
-  opacity: 1.0;
-  transform: translate(-50%, -50%) scale(1);
-}
-.md-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  opacity: 0;
-  background: black;
-  transition: all .35s;
-}
-.md-overlay-active {
-  visibility: visible;
-  opacity: 0.80;
-}
-.md-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 
-    "md-header md-header"
-    "md-sideImg md-sideImg"
-    "md-about md-about"
-    "md-info md-info"
-    "md-button md-button"
-    ;
-  border: 0px solid red;
-  width: 100%;
-  height: 100%;
-  align-content: start;
-  margin: 0 auto;
-  /* background-color: black;
-  color: white; */
-}
-.md-header {
-  grid-area: md-header;
-  width: 100%;
-  min-height: 26px;
-  height: auto;
-  border: 0px solid green;
-  border-bottom: 1px solid #ddd;
-  font-size: 30px;
-  text-align: center;
-  padding-top: 10px;
-  align-self: start;
-  margin: 0 auto;
-  margin-bottom: 00px;
-  padding-bottom: 15px;
-  background-color: white;
-  color: #242322;
-}
-.md-sideImg {
-  grid-area: md-sideImg;
-  border: 0px solid orangered;
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 10px;
-  overflow: hidden;
-}
-#md-sideImg-trial1 {
-  width: 50%;
-}
-.md-image {
-  width: 100%;
-  height: auto;
-  border: 0px solid red;
-}
-.md-about {
-  grid-area: md-about;
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 10px;
-  font-size: 24px;
-}
-.md-info {
-  grid-area: md-info;
-  border: 0px solid orange;
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 5px;
-  font-size: 14px;
-}
-.md-button-area {
-  grid-area: md-button;
-  width: 100%;
-  height: 40px;
-  border: 0px solid green;
-  align-self: end;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  /* background-color: rgba(221, 221, 221, 0.356); */
-  background-color: white;
-}
-.md-button {
-  display: block;
-  width: 100px;
-  height: 35px;
-  border: 1px solid #242322;
-  border-radius: 2px;
-  color: #44484B;
-  background-color: white;
-  font-size: 20px;
-  margin: auto;
-  margin-top: 4px;
-  transition: all .51s;
-  cursor: pointer;
-}
-.md-button:hover {
-  background-color: #F44336;
-  color: white;
-}
-
-
 #headerWrap {
   grid-area: header;
+  border: 0px solid red;
   background-color: white;
 }
 #header {
@@ -222,6 +83,7 @@ a:hover {
 
 #heyaWrap {
   grid-area: heya;
+  border: 0px solid orange;
   background-color: white;
   color: #242322;
 }
@@ -284,75 +146,19 @@ a:hover {
 #worksFrame {
   column-count: 3;
   border: 0px solid gray;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 10px;
   width: 100%;
 }
-.workItem {
-  display: inline-block;
-  break-inside: avoid-column;
-  /* border: 2px solid rgb(125, 0, 149); */
-  border: 2px solid #44484B;
-  margin: 0px;
-  margin-bottom: 10px;
-  opacity: 1.0;
-  transition: all .50s;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-.workItem:hover {
-  border: 2px solid #B71C1C;
-}
-.workItem:hover img {
-  transform: scale(1.08);
-  opacity: 1;
-}
-.workItemImg {
-  border: 0px solid green;
-  width: 100%;
-  transition: all .5s;
-}
-.workItemOverlay {
-  display: grid;
-  align-content: center;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 
-    "overlayHeader overlayHeader"
-    ;
-  border: 0px dashed white;
-  opacity: 0;
-  transition: all .5s;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.workItem:hover > .workItemOverlay {
-  opacity: 1;
-}
-.workItem:hover > .workItemImg {
-  opacity: 0.10;
-}
-.overlayHeader {
-  grid-area: overlayHeader;
-  border: 00px solid red;
-  width: 100%;
-  margin: auto;
-  height: auto;
-  text-align: center;
-  font-size: 20px;
-  font-size:calc(100% + .5vw);
-  overflow-wrap: normal;
-}
+
 
 
 #skillsWrap {
   grid-area: skills;
-  background-color:white;
+  border: 0px solid red;
+  background-color: #242322;
+  color: white;
 }
 #skills {
   display: grid;
@@ -444,6 +250,8 @@ a:hover {
   border: 0px solid orange;
 }
 
+
+
 @media (max-width: 415px) {
   .md-modal {
     width: 95%;
@@ -518,13 +326,13 @@ a:hover {
     width: 50%;
   }
   .highlight {
-    color: white;
+    color: black;
   }
   
   #mainContainer {
     grid-template-areas:
       "header header"
-      "heya works"
+      "heya heya"
       "skills works"
       "contact works"
       "dog works"
@@ -550,16 +358,16 @@ a:hover {
 
   #heyaWrap {
     border: 0px solid black;
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-top: 0px;
-    background-color: #D50000;
-    color: white;
+    background-color: white;
+    color: black;
   }
   #heya {
     border: 0px solid green;
     margin: 0px;
-    width: 100%;
+    width: 50%;
   }
   #heyaHeading {
     border: 0px solid red;
