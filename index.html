@@ -7,6 +7,7 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous">
     </script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <title>Hello</title>
   </head>
 
@@ -52,15 +53,20 @@
       <div class="sectionWrap" id="heyaWrap">
         <div class="section" id="heya">
           <div class="sectionHeading" id="heyaHeading">
-            Heya, my name is <span class="highlight">Michael.</span>
+            Heya, my name is Michael.
           </div>
           <div class="sectionDescription" id="heyaDescription">
-            I'm a <span class="highlight">web developer</span> and <span class="highlight">designer</span>, 
-            and according to my fiancée,
+            I'm a <span class="highlight">web developer</span> and <span class="highlight">designer</span> 
+            who specializes in web and print work for <span class="highlight">small businesses.</span>
+
+            And according to my fiancée,
             I'm going <span class="highlight">bald.</span> <!-- animate bald, so when it's hovered over or clicked,
                 the text below is revealed --> 
           </div>
           <div id="totallyNotBalding">(I'm too young to be balding.)</div>
+
+          <div class="callToActionBtn" id="heyaBtn">Let's talk</div>
+
         </div>
       </div> <!-- end of heya -->
       
@@ -68,22 +74,57 @@
         <div class="section" id="work">
           <div class="sectionHeading" id="workHeading">Work.</div>
           <div class="sectionDescription" id="workDescription">
-            I've been lucky enough to be a part of lots of cool things. Check them out. 
+            I've been lucky enough to be a part of lots of cool projects. Here's some recent ones. 
           </div>
-          <div id="worksFrame">
-
+          <div class="worksFrame">
+            
             <!-- include here: Soonish, Augie, and BAHFest video site -->
+            <div class="workCard" id="soonishCard">
+              <img src="./images/soonish4.png" class="workCardImg" />
+              <div class="workCardHeader">
+                soonishbook.com
+              </div>
+              <div class="workCardDescription">
+                  <i>Soonish: Ten Emerging Technologies That'll Improve and/or Ruin Everything</i> by
+                  Kelly and Zach Weinersmith is now a New York Times Best Seller. It's a funny, insightful book.
+                  <br /><br />
+                  I designed and built the website for Soonish. It is a highly 
+                  responsive website built with HTML, CSS, and just a tiny pinch of JS.
+                  <br /><br />
+                  Visit <a href="http://www.soonishbook.com" target="_blank">soonishbook.com</a>
+              </div>
+            </div>
+
+            <div class="workCard" id="bahCard">
+              <img src="./images/bahvideosite4.gif" class="workCardImg" />
+              <div class="workCardHeader">
+                BAHFest Videos
+              </div>
+              <div class="workCardDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dicta cumque error laboriosam incidunt laborum nemo fugit illum vel ducimus maiores eaque placeat eligendi, accusantium totam necessitatibus inventore doloremque harum?
+              </div>
+            </div>
+
+            <div class="workCard" id="augieCard">
+              <img src="./images/augie2.gif" class="workCardImg" />
+              <div class="workCardHeader">
+                Augie and the Green Knight
+              </div>
+              <div class="workCardDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, modi iusto nostrum ipsum in molestias magnam, ipsa totam quae animi eaque? Necessitatibus, hic? Laboriosam molestiae nulla, in nihil voluptas ullam!
+              </div>
+            </div>
 
           </div> <!-- end of worksframe -->
         </div> <!-- end of work -->
       </div> <!-- end of work wrap -->
       
-      
+
       <div class="sectionWrap" id="skillsWrap">
         <div class="section" id="skills">
           <div class="sectionHeading" id="skillsHeading">Skills.</div>
           <div class="sectionDescription" id="skillsDescription">
-            HTML5, CSS3, JS, React & Redux, Node, AWS, Expertise in Photoshop, 
+            HTML5, CSS3, JS, React & Redux, AWS, Expertise in Photoshop, 
             InDesign, Illustrator, Final Cut Pro, and learning more every day.
           </div>
         </div>
@@ -103,7 +144,7 @@
         <div class="section" id="dog">
           <div class="sectionHeading" id="dogHeading">Dog.</div>
           <div class="sectionDescription" id="dogDescription">
-            Look at my dog. She is the best dog.
+            This is my dog, Ollie. She is the best dog ever.
           </div>
           <div id="ollieFrame">
             <img id="ollieImg"src="images/ollie.jpg">

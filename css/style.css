@@ -1,6 +1,7 @@
 body {
   background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue";
+  color: #242322;
   margin: 0;
 }
 h1 {
@@ -18,13 +19,13 @@ a:hover {
   color: #B71C1C;
 }
 .highlight {
-  color: #F44336;
+  font-weight: bolder;
 }
 .container {
   border: 0px solid black;
   display: grid;
   width: 100%;
-  /* min-height: 100%; */
+  /* min-height: 100%; */ 
   opacity: 1.0;
   transition: opacity 1s;
 }
@@ -44,46 +45,107 @@ a:hover {
 }
 
 .sectionWrap {
-  border: 0px solid black;
+  border: 0px solid red;
   width: 100%;
   margin-top:00px;
 }
 .section {
   display: grid;
   margin: auto;
-  width: 96%;
+  width: 95%;
   border: 0px solid red;
 }
 .sectionHeading {
   border: 0px solid grey;
-  font-size: 40px;
-  margin: 20px;
+  font-size: 50px;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 .sectionDescription {
   border: 0px solid grey;
-  margin: 20px;
-  margin-right: 0px;
-  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.callToActionBtn {
+  width: 90%;
+  height: 40px;
+  border: 2px solid #242322;
+  border-radius: 3px;
+  text-align: center;
+  padding-top: 15px;
+  margin: 10px;
+  transition: all .3s;
+}
+.callToActionBtn:hover {
+  border: 1px solid #B71C1C;
+  cursor: pointer;
 }
 
+.worksFrame {
+  display: flex;
+  flex-direction: column;
+  border: 0px solid gray;
+  width: 100%;
+  margin: auto;
+}
+.workCard {
+  display: grid;
+  border: 0px solid #242322;
+  border-radius: 3px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "workCardImg"
+    "workCardHeader"
+    "workCardDescription"
+    ;
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin: auto;
+}
+.workCardImg {
+  grid-area: workCardImg;
+  border: 0px solid black;
+  border-radius: 0px;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+
+}
+.workCardHeader {
+  grid-area: workCardHeader;
+  border: 0px solid green;
+  width: 100%;
+  margin: 10px;
+  margin-left: 0px;
+  font-size: 28px;
+}
+.workCardDescription {
+  grid-area: workCardDescription;
+  border: 0px solid red;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
 
 #headerWrap {
   grid-area: header;
-  border: 0px solid red;
+  display: none;
+  /* border: 0px solid red; */
   background-color: white;
 }
 #header {
   border: 0px solid grey;
   padding: 10px;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 
 #heyaWrap {
   grid-area: heya;
-  border: 0px solid orange;
+  /* border: 0px solid orange; */
   background-color: white;
   color: #242322;
 }
@@ -99,31 +161,34 @@ a:hover {
 }
 #heyaHeading {
   grid-area: heyaHeading;
-  margin: 40px;
   margin-bottom: 10px;
-  font-size: 60px;
+  font-size: 80px;
+  font-weight: 900;
 }
 #heyaDescription {
   grid-area: heyaDescription;
-  margin: 40px;
   margin-top: 20px;
-  margin-bottom: 00px;
-  font-size: 20px;
+  margin-bottom: 0px;
 }
 #totallyNotBalding {
   grid-area: totallyNotBalding;
-  margin: 40px;
   margin-top: 20px;
+  margin-bottom: 0px;
   font-size: 16px;
+}
+#heyaBtn {
+  margin-bottom: 60px;
+  margin-top: 45px;
 }
 
 
 #workWrap {
   grid-area: works;
   background-color: #242322;
-  color: white;
+  color: #ddd;
   width: 100%;
-  border: 0px solid green;
+  padding-top: 30px;
+  /* border: 0px solid green; */
 }
 #work {
   border: 0px solid white;
@@ -140,25 +205,18 @@ a:hover {
   grid-area: workHeading;
 }
 #workDescription {
-  border: 0px solid red;
   grid-area: workDescription;
 }
-#worksFrame {
-  column-count: 3;
-  border: 0px solid gray;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 10px;
-  width: 100%;
-}
+
 
 
 
 #skillsWrap {
   grid-area: skills;
-  border: 0px solid red;
-  background-color: #242322;
-  color: white;
+  /* border: 0px solid red; */
+  background-color:white;
+  color: #242322;
+  padding-top: 30px;
 }
 #skills {
   display: grid;
@@ -174,16 +232,13 @@ a:hover {
 }
 #skillsDescription {
   grid-area: skillsDescription;
-  margin: 20px;
-  margin-right: 0px;
-  margin-top: 0px;
 }
 
 
 #contactWrap {
   grid-area: contact;
-  background-color: #242322;
-  color: white;
+  background-color: white;
+  color: #242322;
 }
 #contact {
   display: grid;
@@ -221,8 +276,6 @@ a:hover {
 }
 #dogDescription {
   grid-area: dogDescription;
-  margin: 20px;
-  margin-top: 0px;
 }
 #ollieFrame {
   width: 100%;
@@ -304,10 +357,10 @@ a:hover {
   }
   
   #heya {
-    border: 0px solid red;
+    /* border: 0px solid red; */
     margin: auto;
     margin-bottom: 10px;
-    width: 70%;
+    width: 90%;
   }
   
   #worksFrame {
@@ -325,9 +378,6 @@ a:hover {
   .md-modal {
     width: 50%;
   }
-  .highlight {
-    color: black;
-  }
   
   #mainContainer {
     grid-template-areas:
@@ -341,7 +391,7 @@ a:hover {
   }
 
   .sectionWrap {
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
   .sectionHeading {
@@ -357,26 +407,26 @@ a:hover {
   }
 
   #heyaWrap {
-    border: 0px solid black;
-    width: 90%;
+    /* border: 0px solid black; */
+    width: 100%;
     margin: auto;
     margin-top: 0px;
     background-color: white;
     color: black;
   }
   #heya {
-    border: 0px solid green;
+    /* border: 0px solid green; */
     margin: 0px;
     width: 50%;
   }
   #heyaHeading {
-    border: 0px solid red;
+    /* border: 0px solid red; */
     margin: 20px;
     font-size: 60px;
     border-radius: 50%;
   }
   #heyaDescription {
-    border: 0px solid orange;
+    /* border: 0px solid orange; */
     margin: 20px;
     margin-top: 0px;
   }
@@ -386,25 +436,28 @@ a:hover {
   }
 
   #workWrap {
-    border: 0px solid red;
+    /* border: 0px solid red; */
     margin-top: 0px;
     height: 100%;
   }
   #work {
-    margin-top: 50px;
+    margin-top: 00px;
   }
 
   #skillsWrap {
-    border: 0px solid red;
+    /* border: 0px solid red; */
+    color: black;
+    background-color: white;
   }
   #skills {
-    border: 0px solid green;
+    /* border: 0px solid green; */
     width: 100%;
     margin: 0px;
+
   }
 
   #contactWrap {
-    border: 0px solid red;
+    /* border: 0px solid red; */
   }
   #contact {
     border: 0px solid green;
@@ -416,7 +469,7 @@ a:hover {
   }
 
   #dogWrap {
-    border: 0px solid red;
+    /* border: 0px solid red; */
   }
   #dog {
     border: 0px solid green;
@@ -433,7 +486,7 @@ a:hover {
   #mainContainer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-      "heya works works"
+      "heya . ."
       "skills works works"
       "contact works works"
       "dog works works"
@@ -444,11 +497,9 @@ a:hover {
   #worksFrame {
     column-count: 5;
   }
-  #heyaWrap {
-    width: 90%;
-  }
   #heya {
     border: 0px solid black;
+    width: 100%;
   }
 }
 
@@ -461,12 +512,13 @@ a:hover {
   }
   .sectionDescription {
     font-size: 22px;
+    line-height: 32px;
   }
   #heyaHeading {
     font-size: 90px;
   }
   #heyaDescription {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
