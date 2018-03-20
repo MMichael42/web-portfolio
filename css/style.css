@@ -81,53 +81,6 @@ a:hover {
   cursor: pointer;
 }
 
-.worksFrame {
-  display: flex;
-  flex-direction: column;
-  border: 0px solid gray;
-  width: 100%;
-  margin: auto;
-}
-.workCard {
-  display: grid;
-  border: 0px solid #242322;
-  border-radius: 3px;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "workCardImg"
-    "workCardHeader"
-    "workCardDescription"
-    ;
-  width: 100%;
-  height: auto;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  margin: auto;
-}
-.workCardImg {
-  grid-area: workCardImg;
-  border: 0px solid black;
-  border-radius: 0px;
-  width: 100%;
-  margin: auto;
-  margin-top: 10px;
-
-}
-.workCardHeader {
-  grid-area: workCardHeader;
-  border: 0px solid green;
-  width: 100%;
-  margin: 10px;
-  margin-left: 0px;
-  font-size: 28px;
-}
-.workCardDescription {
-  grid-area: workCardDescription;
-  border: 0px solid red;
-  width: 100%;
-  font-size: 20px;
-  margin-bottom: 30px;
-}
 
 #headerWrap {
   grid-area: header;
@@ -181,11 +134,48 @@ a:hover {
   margin-top: 45px;
 }
 
-
+.worksFrame {
+  display: flex;
+  flex-direction: column;
+  border: 0px solid gray;
+  width: 100%;
+  margin: auto;
+}
+.workCard {
+  position: relative;
+}
+.textOverlay {
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.815);
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #eee;
+  min-height: 50%;
+}
+.workCardImg {
+  width: 100%;
+  height: auto;
+}
+.workCardHeader {
+  grid-area: workCardHeader;
+  border: 0px solid green;
+  width: 100%;
+  margin: 10px;
+  margin-left: 0px;
+  font-size: 28px;
+}
+.workCardDescription {
+  grid-area: workCardDescription;
+  border: 0px solid red;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
 #workWrap {
   grid-area: works;
   background-color: #242322;
-  color: #ddd;
+  color: rgb(221, 221, 221);
   width: 100%;
   padding-top: 30px;
   /* border: 0px solid green; */
@@ -199,17 +189,26 @@ a:hover {
     "workHeading"
     "workDescription"
     ;
+  width: 100%;
 }
 #workHeading {
   border: 0px solid yellow;
   grid-area: workHeading;
+  width: 95%;
+  margin: auto;
 }
 #workDescription {
   grid-area: workDescription;
+  width: 95%;
+  margin: auto;
 }
 
-
-
+#soonishCard {
+  /* margin-top: 30px; */
+}
+#bahOverlayText {
+  background-color: rgba(0, 0, 0, 0.705);
+}
 
 #skillsWrap {
   grid-area: skills;
@@ -363,8 +362,12 @@ a:hover {
     width: 90%;
   }
   
-  #worksFrame {
-    column-count: 4;
+  .worksFrame {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .workCard {
+    width: 50%;
   }
 
   #dog {
