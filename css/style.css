@@ -151,7 +151,7 @@ a:hover {
   padding-left: 10px;
   padding-right: 10px;
   color: #eee;
-  min-height: 50%;
+  height: 60%;
 }
 .workCardImg {
   width: 100%;
@@ -201,6 +201,7 @@ a:hover {
   grid-area: workDescription;
   width: 95%;
   margin: auto;
+  margin-bottom: 30px;
 }
 
 #soonishCard {
@@ -211,6 +212,7 @@ a:hover {
 }
 
 #skillsWrap {
+  display: none;
   grid-area: skills;
   /* border: 0px solid red; */
   background-color:white;
@@ -235,6 +237,7 @@ a:hover {
 
 
 #contactWrap {
+  display: none;
   grid-area: contact;
   background-color: white;
   color: #242322;
@@ -257,6 +260,7 @@ a:hover {
 
 
 #dogWrap {
+  display: none;
   grid-area: dog;
   background-color: white;
   color: black;
@@ -384,11 +388,11 @@ a:hover {
   
   #mainContainer {
     grid-template-areas:
-      "header header"
       "heya heya"
-      "skills works"
-      "contact works"
-      "dog works"
+      "works works"
+      "works works"
+      "skills contact"
+      "dog ."
       "footer footer"
     ;
   }
@@ -445,6 +449,9 @@ a:hover {
   }
   #work {
     margin-top: 00px;
+  }
+  .workCard {
+    width: 33%;
   }
 
   #skillsWrap {
